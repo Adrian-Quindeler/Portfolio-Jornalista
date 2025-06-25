@@ -1357,6 +1357,11 @@ footer {
   .soft-skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
+  .contact-details {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 576px) {
