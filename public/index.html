@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de desenvolvimento web">
+    <title>Portfólio</title>
+    <meta name="theme-color" id="theme-color-meta" content="#faf7f2">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png" type="image/png"> <!-- favicon navegadores modernos (edge, chorme, opera etc)-->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon para iphones e ipads-->
+    <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon windows-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="theme-toggle" aria-label="Alternar tema" role="button" tabindex="0">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                  </div>                  
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Olá, eu sou <span class="highlight typed-text">Mariana</span></h1>
+                        <h2>Jornalista</h2>
+                        <p>Sempre estudando para me tornar melhor!</p>
+                        <div class="hero-btns">
+                            <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                            <a href="#contact" class="btn btn-secondary">Contato</a>
+                        </div>
+                    </div>
+                    <div class="hero-image slide-in-right">
+                        <img src="imagens/perfil.jpeg" alt="Foto de perfil" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre Mim</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image slide-in-left">
+                        <img src="imagens/fotoProfissional.jpeg" alt="Foto profissional">
+                    </div>
+                    <div class="about-text slide-in-right">
+                        <p>Me chamo Mariana Bernardino, tenho 20 anos e sou estudante de Jornalismo no Centro Universitário FAESA.</p>
+                        
+                        <h3>Minhas experiências</h3>
+                        <p>Ao longo da minha formação, venho explorando diferentes áreas da comunicação, com experiências práticas que ampliam minha visão sobre o fazer jornalístico. Já atuei na edição de vídeos para o site A Gazeta e, atualmente, integro a equipe de produção da TV Gazeta, onde aprofundo meus conhecimentos sobre os bastidores da televisão e a construção de conteúdo audiovisual.</p>
+                        <p>Tenho experiência com edição de vídeo e sigo em busca de aprimoramento técnico e criativo nessa área. Sou apaixonada por fotografia — uma linguagem que me inspira a observar o mundo com mais sensibilidade — e desejo transformar esse interesse em uma atuação mais profissional.</p>
+
+                        <h3>Minha Abordagem</h3>
+                        <p>Acredito na força da narrativa visual e busco, por meio do jornalismo e da imagem, contar histórias que informem, conectem e provoquem reflexões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meus Projetos</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/capixapedia.jpeg" alt="O 'quebra-quebra' no Convento da Penha">
+                        </div>
+                        <div class="project-info">
+                            <h3>O 'quebra-quebra' no Convento da Penha</h3>
+                            <p>Confusão ocorreu durante uma Romaria dos Homens; cerca de 15 mil fiéis tentavam entrar no santuário, mas foram impedidos porque a imagem de Nossa Senhora da Penha não havia chegado.</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/aP8pH9M2-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/fortesES.jpeg" alt="O 'quebra-quebra' no Convento da Penha">
+                        </div>
+                        <div class="project-info">
+                            <h3>Fortes abrem as portas para turistas e revelam histórias do ES</h3>
+                            <p>Localizados em Vila Velha e Vitória, eles receberam reformas e estão prontinhos para encantar os visitantes</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/dgd8q1Yx-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/casal.jpeg" alt="O 'quebra-quebra' no Convento da Penha">
+                        </div>
+                        <div class="project-info">
+                            <h3>Fim do termo ‘homem e mulher’ para casal; veja mudanças no Código Civil</h3>
+                            <p>Com mudanças no Código Civil brasileiro, a definição de relações pode passar por um processo de modernização</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/UgiWViol-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/fgts.jpeg" alt="Como usar o FGTS Futuro para comprar seu imóvel">
+                        </div>
+                        <div class="project-info">
+                            <h3>Como usar o FGTS Futuro para comprar seu imóvel</h3>
+                            <p>Na nova modalidade, trabalhadores podem usar depósitos futuros do fundo</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/J7GTZ7kH-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/capixabaFutebol.jpeg" alt="Capixaba proibida de jogar com os meninos">
+                        </div>
+                        <div class="project-info">
+                            <h3>Capixaba proibida de jogar com os meninos é contratada pelo São Paulo</h3>
+                            <p>Nicoly Almeida, de São Mateus, é agora jogadora do time paulista</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/cmHv8SNm-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/pickleball.jpeg" alt="Pickleball: esporte com raquete">
+                        </div>
+                        <div class="project-info">
+                            <h3>Pickleball: o esporte com raquete que está conquistando os capixabas</h3>
+                            <p>O esporte que mais se popularizou nos Estados Unidos e agora toma conta dos corações capixabas</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/Aue743Xb-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/tacaFavela.jpeg" alt="Taça das Favelas">
+                        </div>
+                        <div class="project-info">
+                            <h3>Jovens de Cariacica vão em busca do título da Taça das Favelas</h3>
+                            <p>Conheça a história de três atletas da Seleção Capixaba que vai disputar a final nacional da competição em São Paulo</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/xieFNOua-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/bloquearCPF.jpeg" alt="Como bloquear o CPF para evitar fraudes">
+                        </div>
+                        <div class="project-info">
+                            <h3>Como bloquear o CPF para evitar fraudes</h3>
+                            <p>Veja o passo a passo de como agir por meio de ferramenta da Receita Federal</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/fq24aQyQ-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/catedral.jpeg" alt="Atrações no Centro de Vitória">
+                        </div>
+                        <div class="project-info">
+                            <h3>Da Catedral ao Palácio Anchieta: atrações para conhecer melhor o Centro de Vitória</h3>
+                            <p>Na região é possível encontrar igrejas centenárias, museus, teatros e escadarias que retratam a história do Espírito Santo</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/RLtuPS53-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/casal.jpeg" alt="Fiat Uno vira casa para viagens">
+                        </div>
+                        <div class="project-info">
+                            <h3>Casal gaúcho transforma Fiat Uno em casa para viajar pelo Brasil</h3>
+                            <p>Com criatividade e adaptação, casal roda o país em um carro transformado em lar.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/torta.jpeg" alt="Torta de coco de Guarapari">
+                        </div>
+                        <div class="project-info">
+                            <h3>Torta de coco de Guarapari: veja receita e faça em casa</h3>
+                            <p>A sobremesa criada por Idalina Vieira no Gaeta marcou gerações e virou tradição nos principais restaurantes da Praia de Meaípe</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/ZaCk3afU-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="imagens/coreano.jpeg" alt="Comida Coreana em Vitória">
+                        </div>
+                        <div class="project-info">
+                            <h3>Comida coreana é destaque em tour gastronômico na Grande Vitória</h3>
+                            <p>Iguarias como bibimbap e kimchi e até o exótico ovo centenário chinês atraem curiosos a estabelecimentos na Capital, na Serra e em Cariacica</p>
+                            <div class="project-links">
+                                <a href="https://cdn.jwplayer.com/previews/YjsWTZAh-0pQ6aHGU" class="btn btn-sm btn-secondary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entre em Contato</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Estou disponível para projetos freelance e oportunidades de trabalho</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>bernardinomariana934@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p>(27) 98804-4978</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <p>Cariacica, ES, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
