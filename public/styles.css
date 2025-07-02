@@ -681,6 +681,12 @@ header {
   gap: 2rem;
 }
 
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
 .project-card {
   border-radius: 1rem;
   overflow: hidden;
@@ -1553,6 +1559,10 @@ button:disabled {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-height: 500px) and (orientation: landscape) {
@@ -1569,4 +1579,12 @@ button:disabled {
   .hero-content {
     gap: 1rem;
   }
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
 }

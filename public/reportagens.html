@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de desenvolvimento web">
+    <title>Portfólio</title>
+    <meta name="theme-color" id="theme-color-meta" content="#faf7f2">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png" type="image/png"> <!-- favicon navegadores modernos (edge, chorme, opera etc)-->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon para iphones e ipads-->
+    <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon windows-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="/#home" class="nav-link active">Início</a></li>
+                    <li><a href="/videos" class="nav-link">Vídeos Editados</a></li>
+                    <li><a href="/producoes" class="nav-link">Produções</a></li>
+                    <li><a href="/fotografias" class="nav-link">Fotografias</a></li>
+                </ul>
+                <div class="theme-toggle" aria-label="Alternar tema" role="button" tabindex="0">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                  </div>                  
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="mt-5">Reportagens</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/reportagens/danca.jpg" alt="Imagem de pessoas dançando">
+                        </div>
+                        <div class="project-info">
+                            <h3>Empreender com dança</h3>
+                            <p>As dificuldades para empreender e ter sucesso com a arte da dança no Espírito Santo</p>
+                            <div class="project-links">
+                                <a href="https://lacosfaesa.com.br/2024/05/22/as-dificuldades-para-empreender-e-ter-sucesso-com-a-arte-da-danca-no-espirito-santo/" class="btn btn-sm btn-secondary" target="_blank">Ver reportagem</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/reportagens/tatuagens.jpg" alt="Uma tatuagem que diz o que a pessoa é alérgica">
+                        </div>
+                        <div class="project-info">
+                            <h3>Tatuagens de alerta</h3>
+                            <p>Tatuagens de alerta: o que são e por que estão cada vez mais comuns</p>
+                            <div class="project-links">
+                                <a href="https://www.agazeta.com.br/redacao-integrada/tatuagens-de-alerta-o-que-sao-e-por-que-estao-cada-vez-mais-comuns-0124" class="btn btn-sm btn-secondary" target="_blank">Ver reportagem</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/reportagens/cooperativa.jpg" alt="Imagem da cooperativa mirim">
+                        </div>
+                        <div class="project-info">
+                            <h3>Cooperativa mirim</h3>
+                            <p>Cooperativa mirim no ES ensina alunos a comandar negócio</p>
+                            <div class="project-links">
+                                <a href="https://www.agazeta.com.br/es/economia/cooperativa-mirim-no-es-ensina-alunos-a-comandar-negocios-1024" class="btn btn-sm btn-secondary" target="_blank">Ver reportagem</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/reportagens/enfermeira.jpg" alt="Imagem da mãe que estudou enfermagem pelo filho">
+                        </div>
+                        <div class="project-info">
+                            <h3>Mãe enfermeira</h3>
+                            <p>Mãe se forma na área de Saúde para cuidar de filho com doença rara</p>
+                            <div class="project-links">
+                                <a href="https://www.agazeta.com.br/es/cotidiano/mae-se-forma-na-area-de-saude-para-cuidar-de-filho-com-doenca-rara-1124" class="btn btn-sm btn-secondary" target="_blank">Ver reportagem</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/reportagens/neve.jpg" alt="Boneco de neve feito por turistas">
+                        </div>
+                        <div class="project-info">
+                            <h3>Boneco de neve</h3>
+                            <p>Baixas temperaturas congelam cachoeira, e turistas fazem 'bonequinho de neve' no ES</p>
+                            <div class="project-links">
+                                <a href="https://g1.globo.com/es/espirito-santo/noticia/2025/06/15/baixas-temperaturas-congelam-cachoeira-e-turistas-fazem-bonequinho-de-neve-no-es.ghtml" class="btn btn-sm btn-secondary" target="_blank">Ver reportagem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entre em Contato</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="contact-content">
+                    <p>Estou disponível para trabalhos freelance e oportunidades de trabalho</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>bernardinomariana934@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p>(27) 98804-4978</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <p>Cariacica, ES, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/#home">Início</a>
+                    <a href="/videos">Vídeos Editados</a>
+                    <a href="/producoes">Produções</a>
+                    <a href="/fotografias">Fotografias</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#projects" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de desenvolvimento web">
+    <title>Portfólio</title>
+    <meta name="theme-color" id="theme-color-meta" content="#faf7f2">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png" type="image/png"> <!-- favicon navegadores modernos (edge, chorme, opera etc)-->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon para iphones e ipads-->
+    <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon windows-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="/#home" class="nav-link active">Início</a></li>
+                    <li><a href="/videos" class="nav-link">Vídeos Editados</a></li>
+                    <li><a href="/reportagens" class="nav-link">Reportagens</a></li>
+                    <li><a href="/fotografias" class="nav-link">Fotografias</a></li>
+                </ul>
+                <div class="theme-toggle" aria-label="Alternar tema" role="button" tabindex="0">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                  </div>                  
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="mt-5">Produções</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="projects-grid index-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/producoes/vacinas.jpg" alt="Vacinas">
+                        </div>
+                        <div class="project-info">
+                            <h3>Vacinas em Vitória</h3>
+                            <p>Moradores de Vitória reclamam que não conseguem se vacinar em postos de saúde da capital</p>
+                            <div class="project-links">
+                                <a href="https://globoplay.globo.com/v/13658515" class="btn btn-sm btn-secondary" target="_blank">Ver produção</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="img/producoes/importunação.jpg" alt="Importunação">
+                        </div>
+                        <div class="project-info">
+                            <h3>Importunação Sexual no ES</h3>
+                            <p>Espírito Santo registra maior aumento de casos de importunação sexual no país </p>
+                            <div class="project-links">
+                                <a href="https://globoplay.globo.com/v/13602720/" class="btn btn-sm btn-secondary" target="_blank">Ver produção</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entre em Contato</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="contact-content">
+                    <p>Estou disponível para trabalhos freelance e oportunidades de trabalho</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>bernardinomariana934@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p>(27) 98804-4978</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <p>Cariacica, ES, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/#home">Início</a>
+                    <a href="/videos">Vídeos Editados</a>
+                    <a href="/reportagens">Reportagens</a>
+                    <a href="/fotografias">Fotografias</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#projects" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
