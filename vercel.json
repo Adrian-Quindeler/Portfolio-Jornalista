@@ -4,6 +4,13 @@
     { "source": "/videos", "destination": "/videosEditados.html" },
     { "source": "/producoes", "destination": "/producoes.html" },
     { "source": "/reportagens", "destination": "/reportagens.html" },
-    { "source": "/fotografias", "destination": "/fotografias.html" }
+    { "source": "/fotografias", "destination": "/fotografias.html" },
+    { "source": "/romariaMulheres", "destination": "/fotos/romariaMulheres.html" },
+    { "source": "/romariaConguistas", "destination": "/fotos/romariaConguistas.html" },
+    { "source": "/ilhaCaieiras", "destination": "/fotos/ilhaCaieiras.html" },
+    { "source": "/romariaCiclistas", "destination": "/fotos/romariaCiclistas.html" },
+    { "source": "/pequenoMC", "destination": "/fotos/pequenoMC.html" },
+    { "source": "/territorioBem", "destination": "/fotos/territorioBem.html" },
+    { "source": "/MCMulheres", "destination": "/fotos/mcMulheres.html" }
   ]
 }
