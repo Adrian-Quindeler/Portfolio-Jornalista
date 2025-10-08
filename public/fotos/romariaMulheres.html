@@ -6,9 +6,10 @@
     <meta name="description" content="Portfólio profissional de jornalismo">
     <title>Portfólio</title>
     <meta name="theme-color" id="theme-color-meta" content="#faf7f2">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png" type="image/png"> <!-- favicon navegadores modernos (edge, chorme, opera etc)-->
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon para iphones e ipads-->
-    <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/512/943/943329.png"> <!--favicon windows-->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png">
+    <meta name="msapplication-TileImage" content="https://cdn-icons-png.flaticon.com/512/943/943329.png">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -27,11 +27,12 @@
                     <li><a href="/videos" class="nav-link">Vídeos Editados</a></li>
                     <li><a href="/producoes" class="nav-link">Produções</a></li>
                     <li><a href="/reportagens" class="nav-link">Reportagens</a></li>
+                    <li><a href="/fotografias" class="nav-link">Fotografias</a></li>
                 </ul>
                 <div class="theme-toggle" aria-label="Alternar tema" role="button" tabindex="0">
                     <i class="fas fa-sun" aria-hidden="true"></i>
                     <i class="fas fa-moon" aria-hidden="true"></i>
-                  </div>                  
+                  </div>
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -43,54 +44,63 @@
 
     <main>
         <section id="projects" class="projects section-padding">
-            <div class="images-grid">
-                <div class="image-content">
-                    <a href="romariaMulheres">
-                        <img class="categorias cinza" src="img/fotos/romaria_mulheres/Cópia de DSC_0034.JPG" alt="Romaria das mulheres" class="fade-in">
-                        <div class="centralizar"><p>Romaria das mulheres</p></div>
-                    </a>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="mt-5">Romaria das mulheres</h2>
+                    <div class="underline"></div>
                 </div>
-
-                <div class="image-content">
-                    <a href="romariaConguistas">
-                        <img class="categorias cinza" src="img/fotos/romaria_congo/_DSC7212.JPG" alt="Romaria dos conguistas" class="fade-in">
-                        <div class="centralizar"><p>Romaria dos conguistas</p></div>
-                    </a>
+                <div class="section-header">
+                    <p class="descricao_fotos">A Romaria das Mulheres envolve uma caminhada pelas ruas da cidade, com as mulheres se dirigindo para um local de celebração, como o Parque da Prainha em Vila Velha.</p>
                 </div>
-
-                <div class="image-content">
-                    <a href="ilhaCaieiras"> 
-                        <img class="categorias cinza" src="img/fotos/Ilha_caieiras/_DSC4175.JPG" alt="Ilha das Caieiras" class="fade-in">
-                        <div class="centralizar"><p>Ilha das Caieiras</p></div>
-                    </a>
-                </div>
-                    
-                <div class="image-content">
-                    <a href="romariaCiclistas">
-                        <img class="categorias cinza" src="img/fotos/Romaria_ciclistas/_DSC7067.JPG" alt="Romaria dos ciclistas" class="fade-in">
-                        <div class="centralizar"><p>Romaria dos ciclistas</p></div>
-                    </a>
-                </div>
-
-                <div class="image-content">
-                    <a href="pequenoMC">
-                        <img class="categorias cinza" style="margin-bottom: -90px !important;" src="img/fotos/pequeno_mc/capa.jpg" alt="Pequeno Movimento Cidade" class="fade-in">
-                        <div class="centralizar"><p>Pequeno<br>Movimento Cidade</p></div>
-                    </a>
-                </div>
-
-                <div class="image-content">
-                    <a href="territorioBem">
-                        <img class="categorias cinza" src="img/fotos/territorio_bem/DSC_0182.jpg" alt="Território do Bem" class="fade-in">
-                        <div class="centralizar"><p>Território do Bem</p></div>
-                    </a>
-                </div>
-
-                <div class="image-content">
-                    <a href="MCMulheres">
-                        <img class="categorias cinza" src="img/fotos/mc_mulheres/_MBR3730.jpg" alt="MC Mulheres" class="fade-in">
-                        <div class="centralizar"><p>MC Mulheres</p></div>
-                    </a>
+                <div class="images-grid">
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0034.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0145.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0148.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0175.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0187.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0190.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0196.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0221.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0231.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0251.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de DSC_0267.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de Mariana(1).JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/Cópia de Mariana(2).JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/DSC_0015.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/DSC_0235.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
+                    <div class="image-content">
+                        <img src="img/fotos/romaria_mulheres/DSC_0268.JPG" alt="Romaria das mulheres" class="fade-in">
+                    </div>
                 </div>
             </div>
         </section>

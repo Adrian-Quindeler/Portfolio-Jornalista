@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/videos", "destination": "/videos_editados.html" },
+    { "source": "/videos", "destination": "/videosEditados.html" },
     { "source": "/producoes", "destination": "/producoes.html" },
     { "source": "/reportagens", "destination": "/reportagens.html" },
     { "source": "/fotografias", "destination": "/fotografias.html" }

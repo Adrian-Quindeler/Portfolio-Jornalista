@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/videos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'videos_editados.html'));
+  res.sendFile(path.join(__dirname, 'public', 'videosEditados.html'));
 });
 
 app.get('/producoes', (req, res) => {
@@ -29,6 +29,35 @@ app.get('/reportagens', (req, res) => {
 app.get('/fotografias', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'fotografias.html'));
 });
+
+app.get('/romariaMulheres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'romariaMulheres.html'))
+});
+
+app.get('/romariaConguistas', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'romariaConguistas.html'))
+});
+
+app.get('/ilhaCaieiras', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'ilhaCaieiras.html'))
+});
+
+app.get('/romariaCiclistas', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'romariaCiclistas.html'))
+});
+
+app.get('/pequenoMC', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'pequenoMC.html'))
+});
+
+app.get('/territorioBem', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'territorioBem.html'))
+});
+
+app.get('/MCMulheres', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'fotos' , 'MCMulheres.html'))
+});
+
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
