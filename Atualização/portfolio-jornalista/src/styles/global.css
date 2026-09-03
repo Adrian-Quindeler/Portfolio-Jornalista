@@ -53,7 +53,7 @@ button {
     font-weight: 700;
 }
 
-.hero h1 {
+.hero-title {
     margin: 0;
     font-size: 3rem;
     color: var(--color-primary);

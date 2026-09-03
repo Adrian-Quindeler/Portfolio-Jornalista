@@ -1,11 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import WorkCard from "../components/WorkCard.astro";
+
+const works = [
+	{
+        title: "Vídeos editados",
+        description:
+            "Uma seleção dos vídeos que editei no período em que trabalhei na Gazeta. Todos foram publicados no site A Gazeta.",
+        image: "/images/trabalhos/videos.jpg",
+        href: "/trabalhos/videos",
+    },
+    {
+        title: "Produções",
+        description:
+            'Produções feitas para o jornal "Boa Noite ES", da Gazeta.',
+        image: "/images/trabalhos/producoes.jpg",
+        href: "/trabalhos/producoes",
+    },
+    {
+        title: "Reportagens",
+        description:
+            "Conteúdos jornalísticos publicados em veículos de comunicação.",
+        image: "/images/trabalhos/reportagens.jpg",
+        href: "/trabalhos/reportagens",
+    },
+    {
+        title: "Fotografias",
+        description:
+            "Uma seleção de fotografias capturadas durante o curso de Jornalismo na FAESA.",
+        image: "/images/trabalhos/fotografias.jpg",
+        href: "/trabalhos/fotografias",
+    },
+]
 ---
 
 <Layout>
+	<!-- HERO -->
 	<section class="hero container">
 		<div class="hero-content">
-			<p class="helo-greeting">Olá, eu sou</p>
+			<p class="hero-greeting">Olá, eu sou</p>
 			<h1 class="hero-title">Mariana Bernardino</h1>
 			<p class="hero-role">Jornalista</p>
 			<p class="hero-description">Sempre estudando para me tornar melhor!</p>
@@ -15,5 +49,80 @@ import Layout from "../layouts/Layout.astro";
 				<a href="/contato" class="button">Contato</a>
 			</div>
 		</div>
+
+		<div class="hero-image">
+			<img src="/images/perfil.jpg" alt="Mariana Bernardino" />
+		</div>
 	</section>
+
+	<!-- SOBRE -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <SectionTitle title="Sobre Mim" />
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/images/profissional.jpg" alt="Mariana Bernardino com uma câmera fotográfica" />
+                </div>
+
+                <div class="about-text">
+                    <p>Me chamo Mariana Bernardino, tenho 20 anos e sou estudante de Jornalismo no Centro Universitário FAESA.</p>
+
+                    <h3>Minhas experiências</h3>
+                    <p>Ao longo da minha formação, venho explorando diferentes áreas da comunicação, com experiências práticas que ampliam minha visão sobre o fazer jornalístico.</p>
+                    <p>Já atuei na edição de vídeos, produção de pautas para TV, jornal online e impresso. Tenho conhecimento sobre os bastidores da televisão e a construção de conteúdo audiovisual. </p>
+
+                    <h3>Minha abordagem</h3>
+                    <p>Acredito na força da narrativa visual e busco, por meio do jornalismo e da imagem, contar histórias que informem, conectem e provoquem reflexões. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TRABALHOS -->
+    <section id="trabalhos" class="works">
+        <div class="container">
+            <SectionTitle title="Meus Trabalhos" />
+
+            <div class="works-grid">
+                {works.map((work) => (
+                    <WorkCard title={work.title}
+                        description={work.description}
+                        image={work.image}
+                        href={work.href}
+                    />
+                ))}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <SectionTitle title="Entre em Contato" />
+
+            <div class="contact-content">
+                <p>Estou disponível para trabalhos freelance e oportunidades de trabalho. </p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:bernardinomariana934@gmail.com">bernardinomariana934@gmail.com</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Telefone</h3>
+                        <a href="tel:+5527988044978">(27) 98804-4978</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Localização</h3>
+                        <p>Cariacica, ES, Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>

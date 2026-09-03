@@ -1,0 +1,40 @@
+---
+const socialLinks = [
+	{
+		label: "WhatsApp",
+		href: "https://wa.me/5527996519672",
+	},
+	{
+		label: "LinkedIn",
+		href: "https://www.linkedin.com/in/adrian-jansen-quindeler-602337265",
+	},
+	{
+		label: "Portfólio",
+		href: "https://portfolio-pi-eight-70.vercel.app",
+	},
+];
+---
+
+<footer class="footer">
+	<div class="footer-content">
+		<div class="dev-info">
+			<p>Desenvolvido por: Adrian Jansen Quindeler</p>
+		</div>
+
+		<div class="social-links">
+			<ul>
+				{socialLinks.map((link) => (
+					<li>
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{link.label}
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
+	</div>
+</footer>
