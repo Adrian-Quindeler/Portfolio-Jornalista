@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import WorkCard from "../../components/WorkCard.astro";
+import { videos } from "../../data/videos";
+---
+
+<Layout title="Vídeos Editados | Mariana Bernardino">
+    <section class="works-page container">
+        <SectionTitle title="Vídeos Editados" />
+
+        <div class="works-grid">
+            {
+                videos.map((work) => (
+                    <WorkCard {...work} />
+                ))
+            }
+        </div>
+    </section>
+</Layout>

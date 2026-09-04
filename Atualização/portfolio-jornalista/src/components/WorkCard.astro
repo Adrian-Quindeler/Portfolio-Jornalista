@@ -4,12 +4,13 @@ interface Props {
     description: string;
     image: string;
     href: string;
+    linkLabel?: string;
 }
 
-const { title, description, image, href } = Astro.props;
+const { title, description, image, href, linkLabel = "Ver trabalho", } = Astro.props;
 ---
 
-<a href={href} class="work-card">
+<article class="work-card">
     <div class="image-container">
         <img src={image} alt={title} />
     </div>
@@ -17,5 +18,13 @@ const { title, description, image, href } = Astro.props;
     <div class="content">
         <h2>{title}</h2>
         <p>{description}</p>
+
+        <a href={href}
+           class="button button-primary"
+           target="_blank"
+           rel="noopener noreferrer"
+        >
+            {linkLabel}
+        </a>
     </div>
-</a>
+</article>

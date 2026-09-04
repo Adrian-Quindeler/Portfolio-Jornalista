@@ -1,0 +1,17 @@
+---
+interface Props {
+    title: string;
+    image: string;
+    href: string;
+}
+
+const { title, image, href } = Astro.props;
+---
+
+<a href={href} class="photo-card">
+    <img src={image} alt={title} />
+
+    <div class="photo-card-overlay">
+        <h2>{title}</h2>
+    </div>
+</a>

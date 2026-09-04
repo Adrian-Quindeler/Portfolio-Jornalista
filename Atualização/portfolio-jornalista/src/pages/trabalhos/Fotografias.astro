@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import PhotoCard from "../../components/PhotoCard.astro";
+import { galleries } from "../../data/fotografias";
+---
+
+<Layout title="Fotografias | Mariana Bernardino">
+    <section class="photography-page container">
+        <SectionTitle title="Fotografias" />
+
+        <div class="photo-grid">
+            {
+                galleries.map((gallery) => (
+                    <PhotoCard {...gallery} />
+                ))
+            }
+        </div>
+    </section>
+</Layout>
