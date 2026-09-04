@@ -1,0 +1,41 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "DSC_0032.JPG",
+    "DSC_0051.JPG",
+    "DSC_0062.JPG",
+    "DSC_0078.JPG",
+    "DSC_0081.JPG",
+    "DSC_0087.JPG",
+    "DSC_0153.JPG",
+    "DSC_0168.JPG",
+    "DSC_0182.JPG",
+    "DSC_0210.JPG",
+    "DSC_0234.JPG",
+    "DSC_0238.JPG",
+].map((file) => ({
+    src: `/images/fotos/territorio_bem/${encodeURIComponent(file)}`,
+    alt: "Território do Bem",
+}));
+---
+
+<Layout title="Território do Bem | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Território do Bem" />
+
+        <div class="photo-project-intro">
+            <p>
+                Visita técnica no bairro do Jaburu em Vitória, da disciplina Comunicação e Cidadania que busca ampliar o conhecimento da população sobre os direitos fundamentais. As fotos mostram a riqueza cultural e social do território produzida pelos próprios moradores.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

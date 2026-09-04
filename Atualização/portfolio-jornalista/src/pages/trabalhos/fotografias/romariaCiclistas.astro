@@ -1,0 +1,53 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "_DSC7067.JPG",
+    "_DSC7068.JPG",
+    "_DSC7074.JPG",
+    "_DSC7075.JPG",
+    "_DSC7077.JPG",
+    "_DSC7083.JPG",
+    "_DSC7084.JPG",
+    "_DSC7085.JPG",
+    "_DSC7088.JPG",
+    "_DSC7089.JPG",
+    "_DSC7106.JPG",
+    "_DSC7118.JPG",
+    "_DSC7119.JPG",
+    "_DSC7128.JPG",
+    "_DSC7130.JPG",
+    "_DSC7140.JPG",
+    "_DSC7141.JPG",
+    "_DSC7142.JPG",
+    "_DSC7145.JPG",
+    "_DSC7158.JPG",
+    "_DSC7163.JPG",
+    "_DSC7165.JPG",
+    "_DSC7178.JPG",
+    "_DSC7179.JPG",
+].map((file) => ({
+    src: `/images/fotos/Romaria_ciclistas/${encodeURIComponent(file)}`,
+    alt: "Romaria dos Ciclistas",
+}));
+---
+
+<Layout title="Romaria dos Ciclistas | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Romaria dos Ciclistas" />
+
+        <div class="photo-project-intro">
+            <p>
+                A Romaria dos Ciclistas é um evento que combina fé e esporte, onde ciclistas pedalam em procissão para homenagear Nossa Senhora da Penha, a padroeira do Espírito Santo, dentro da programação da Festa da Penha em Vila Velha. O evento, que acontece anualmente na data da festa, reúne milhares de devotos em uma celebração de devoção, fé e gratidão.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

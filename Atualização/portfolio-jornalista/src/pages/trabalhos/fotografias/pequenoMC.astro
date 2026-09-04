@@ -1,0 +1,52 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "capa.jpg",
+    "_MBR4356.jpg",
+    "_MBR4406.jpg",
+    "_MBR4411.jpg",
+    "_MBR4413.jpg",
+    "_MBR4425.jpg",
+    "_MBR4452.jpg",
+    "_MBR4504 (1).jpg",
+    "_MBR4527.jpg",
+    "_MBR4548.jpg",
+    "_MBR4551.jpg",
+    "_MBR4561.jpg",
+    "_MBR4573.jpg",
+    "_MBR4590.jpg",
+    "_MBR4603.jpg",
+    "_MBR4606.jpg",
+    "WhatsApp Image 2025-10-01 at 13.35.10.jpg",
+    "WhatsApp Image 2025-10-01 at 13.53.39.jpg",
+    "WhatsApp Image 2025-10-01 at 13.53.39 (1).jpg",
+    "WhatsApp Image 2025-10-01 at 13.57.08.jpg",
+    "WhatsApp Image 2025-10-01 at 13.57.08 (1).jpg",
+    "WhatsApp Image 2025-10-01 at 13.57.16.jpg",
+    "WhatsApp Image 2025-10-01 at 13.57.22.jpg",
+].map((file) => ({
+    src: `/images/fotos/pequeno_mc/${encodeURIComponent(file)}`,
+    alt: "Pequeno Movimento Cidade",
+}));
+---
+
+<Layout title="Pequeno Movimento Cidade | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Pequeno Movimento Cidade" />
+
+        <div class="photo-project-intro">
+            <p>
+                Festival do Movimento Cidade feito especialmente para as crianças com oficinas de arte, natureza, brincadeiras e imaginação soltas no ar. Em 2025, junto com o projeto de extensão da Faesa, foi realizada uma cobertura fotográfica durante os dias de oficinas.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

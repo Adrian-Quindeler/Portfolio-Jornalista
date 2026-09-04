@@ -1,0 +1,39 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "_MBR3376.JPG",
+    "_MBR3387.jpg",
+    "_MBR3409.jpg",
+    "_MBR3414.jpg",
+    "_MBR3526.jpg",
+    "_MBR3636.JPG",
+    "_MBR3708.jpg",
+    "_MBR3730.JPG",
+    "_MBR3893.jpg",
+    "_MBR4067.jpg",
+].map((file) => ({
+    src: `/images/fotos/mc_mulheres/${encodeURIComponent(file)}`,
+    alt: "MC Mulheres",
+}));
+---
+
+<Layout title="MC Mulheres | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="MC Mulheres" />
+
+        <div class="photo-project-intro">
+            <p>
+                O MC Mulheres nasce do Movimento Cidade com o intuito de fortalecer a economia criativa e impulsionar a carreira de mulheres negras artistas da música e do audiovisual brasileiro. Em 2025, foi realizadas diversas oficinas. Junto com o projeto de extensão da Faesa, foi realizada uma cobertura fotográfica durante toda a semana do curso.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

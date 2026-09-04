@@ -1,0 +1,43 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "_DSC7212.JPG",
+    "_DSC7214.JPG",
+    "_DSC7221.JPG",
+    "_DSC7223.JPG",
+    "_DSC7228.JPG",
+    "_DSC7239.JPG",
+    "_DSC7251.JPG",
+    "_DSC7252.JPG",
+    "_DSC7254.JPG",
+    "_DSC7258.JPG",
+    "_DSC7264.JPG",
+    "_DSC7275.JPG",
+    "_DSC7282.JPG",
+    "_DSC7285.JPG",
+].map((file) => ({
+    src: `/images/fotos/romaria_congo/${encodeURIComponent(file)}`,
+    alt: "Romaria dos Conguistas",
+}));
+---
+
+<Layout title="Romaria dos Conguistas | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Romaria dos Conguistas" />
+
+        <div class="photo-project-intro">
+            <p>
+                A Romaria dos Conguistas é uma celebração de fé e cultura que faz parte da Festa da Penha em Vila Velha, Espírito Santo. Nela, as bandas de congo do estado sobem ao Convento da Penha para homenagear Nossa Senhora da Penha. Uma celebração que une músicas e danças.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

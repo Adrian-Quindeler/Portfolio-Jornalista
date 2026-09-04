@@ -1,0 +1,53 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "_DSC4175.JPG",
+    "_DSC4176.JPG",
+    "_DSC4177.JPG",
+    "_DSC4179.JPG",
+    "_DSC4227.JPG",
+    "_DSC4228.JPG",
+    "_DSC4230.JPG",
+    "BAR01101.JPG",
+    "BAR01102.JPG",
+    "BAR01122.JPG",
+    "BAR01135.JPG",
+    "BAR01137.JPG",
+    "BAR01139.JPG",
+    "BAR01140.JPG",
+    "BAR01141.JPG",
+    "BAR01143.JPG",
+    "BAR01144.JPG",
+    "BAR01148.JPG",
+    "BAR01149.JPG",
+    "BAR01150.JPG",
+    "BAR01151.JPG",
+    "BAR01154.JPG",
+    "BAR01155.JPG",
+    "BAR01156.JPG",
+].map((file) => ({
+    src: `/images/fotos/Ilha_caieiras/${encodeURIComponent(file)}`,
+    alt: "Ilha das Caieiras",
+}));
+---
+
+<Layout title="Ilha das Caieiras | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Ilha das Caieiras" />
+
+        <div class="photo-project-intro">
+            <p>
+                A Ilha das Caieiras, é um bairro da região da Grande São Pedro, em Vitória. Teve origem com o primeiro donatário da capitania do Espírito Santo, Vasco Fernandes Coutinho, durante a colonização do estado. A região também é conhecida por abrigar as Desfiadeiras de Siri e restaurantes de culinária típica. Do local os visitantes podem avistar diversos monumentos naturais.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>

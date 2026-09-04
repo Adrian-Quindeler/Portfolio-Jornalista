@@ -1,0 +1,47 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import PhotoGallery from "../../../components/PhotoGallery.astro";
+import SectionTitle from "../../../components/SectionTitle.astro";
+
+const photos = [
+    "Cópia de DSC_0034.JPG",
+    "Cópia de DSC_0145.JPG",
+    "Cópia de DSC_0148.JPG",
+    "Cópia de DSC_0175.JPG",
+    "Cópia de DSC_0187.JPG",
+    "Cópia de DSC_0190.JPG",
+    "Cópia de DSC_0196.JPG",
+    "Cópia de DSC_0216.JPG",
+    "Cópia de DSC_0221.JPG",
+    "Cópia de DSC_0231.JPG",
+    "Cópia de DSC_0251.JPG",
+    "Cópia de DSC_0267.JPG",
+    "Cópia de DSC_0272.JPG",
+    "Cópia de Mariana(1).JPG",
+    "Cópia de Mariana(2).JPG",
+    "DSC_0015.JPG",
+    "DSC_0235.JPG",
+    "DSC_0268.JPG",
+].map((file) => ({
+    src: `/images/fotos/romaria_mulheres/${encodeURIComponent(file)}`,
+    alt: "Romaria das Mulheres",
+}));
+---
+
+<Layout title="Romaria das Mulheres | Mariana Bernardino">
+
+    <section class="photo-project container">
+
+        <SectionTitle title="Romaria das Mulheres" />
+
+        <div class="photo-project-intro">
+            <p>
+                A Romaria das Mulheres envolve uma caminhada pelas ruas da cidade, com as mulheres se dirigindo para um local de celebração, como o Parque da Prainha em Vila Velha.
+            </p>
+        </div>
+
+        <PhotoGallery photos={photos} />
+
+    </section>
+
+</Layout>
