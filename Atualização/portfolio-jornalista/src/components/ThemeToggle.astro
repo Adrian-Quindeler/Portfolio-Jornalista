@@ -1,4 +1,33 @@
 <button class="theme-toggle" type="button" aria-label="Alternar tema">
-    <i class="fa-solid fa-sun"></i>
-    <i class="fa-regular fa-moon"></i>
+    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+    <i class="fa-regular fa-moon" aria-hidden="true"></i>
 </button>
+
+<script>
+    const STORAGE_KEY = "theme";
+
+    function getPreferredTheme() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored === "dark" || stored === "light") return stored;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    }
+
+    function applyTheme(theme: string) {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem(STORAGE_KEY, theme);
+    }
+
+    applyTheme(getPreferredTheme());
+
+    document.querySelectorAll(".theme-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const next =
+                document.documentElement.dataset.theme === "dark"
+                    ? "light"
+                    : "dark";
+            applyTheme(next);
+        });
+    });
+</script>

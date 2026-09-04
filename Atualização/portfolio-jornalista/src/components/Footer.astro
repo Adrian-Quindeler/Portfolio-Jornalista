@@ -17,11 +17,9 @@ const socialLinks = [
 
 <footer class="footer">
 	<div class="footer-content">
-		<div class="dev-info">
-			<p>Desenvolvido por: Adrian Jansen Quindeler</p>
-		</div>
+		<p class="dev-info">Desenvolvido por: Adrian Jansen Quindeler</p>
 
-		<div class="social-links">
+		<nav class="social-links" aria-label="Links do desenvolvedor">
 			<ul>
 				{socialLinks.map((link) => (
 					<li>
@@ -35,6 +33,6 @@ const socialLinks = [
 					</li>
 				))}
 			</ul>
-		</div>
+		</nav>
 	</div>
 </footer>
