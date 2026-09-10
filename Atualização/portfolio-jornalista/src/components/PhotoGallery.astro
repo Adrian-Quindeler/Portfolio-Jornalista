@@ -10,22 +10,26 @@ interface Props {
 const { photos, alt = "Fotografia" } = Astro.props;
 ---
 
-<div class="photo-gallery">
-    {
-        photos.map((photo) => (
-            <figure class="gallery-item">
-                <img
-                    src={getCldUrl(photo.publicId, {
-                        width: 1200,
-                        crop: "limit",
-                    })}
-                    width={photo.width || undefined}
-                    height={photo.height || undefined}
-                    alt={alt}
-                    loading="lazy"
-                    decoding="async"
-                />
-            </figure>
-        ))
-    }
-</div>
+{
+    photos.length > 0 ? (
+        <div class="photo-gallery">
+            {photos.map((photo) => (
+                <figure class="gallery-item">
+                    <img
+                        src={getCldUrl(photo.publicId, {
+                            width: 1200,
+                            crop: "limit",
+                        })}
+                        width={photo.width || undefined}
+                        height={photo.height || undefined}
+                        alt={alt}
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </figure>
+            ))}
+        </div>
+    ) : (
+        <p class="photo-gallery-empty">Nenhuma fotografia disponível.</p>
+    )
+}
