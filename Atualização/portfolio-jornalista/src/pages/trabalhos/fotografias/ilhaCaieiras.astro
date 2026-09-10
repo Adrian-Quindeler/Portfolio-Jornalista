@@ -3,8 +3,10 @@ import Layout from "../../../layouts/Layout.astro";
 import PhotoGallery from "../../../components/PhotoGallery.astro";
 import SectionTitle from "../../../components/SectionTitle.astro";
 import { galerias } from "../../../data/galerias";
+import { listFolder } from "../../../lib/cloudinary";
 
 const gallery = galerias.ilhaCaieiras;
+const photos = await listFolder(gallery.folder);
 ---
 
 <Layout title={`${gallery.title} | Mariana Bernardino`}>
@@ -13,6 +15,6 @@ const gallery = galerias.ilhaCaieiras;
         <div class="photo-project-intro">
             <p>{gallery.description}</p>
         </div>
-        <PhotoGallery photos={gallery.photos} />
+        <PhotoGallery photos={photos} alt={gallery.alt} />
     </section>
 </Layout>

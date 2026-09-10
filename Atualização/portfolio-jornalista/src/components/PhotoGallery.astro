@@ -1,23 +1,30 @@
 ---
 import "../styles/fotografias.css";
-
-interface Photo {
-    src: string;
-    alt: string;
-}
+import { getCldUrl, type CldAsset } from "../lib/cloudinary";
 
 interface Props {
-    photos: Photo[];
+    photos: CldAsset[];
+    alt?: string;
 }
 
-const { photos } = Astro.props;
+const { photos, alt = "Fotografia" } = Astro.props;
 ---
 
 <div class="photo-gallery">
     {
         photos.map((photo) => (
             <figure class="gallery-item">
-                <img src={photo.src} alt={photo.alt} />
+                <img
+                    src={getCldUrl(photo.publicId, {
+                        width: 1200,
+                        crop: "limit",
+                    })}
+                    width={photo.width || undefined}
+                    height={photo.height || undefined}
+                    alt={alt}
+                    loading="lazy"
+                    decoding="async"
+                />
             </figure>
         ))
     }

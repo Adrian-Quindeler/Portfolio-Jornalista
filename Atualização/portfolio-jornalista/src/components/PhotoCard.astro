@@ -1,4 +1,6 @@
 ---
+import { getCldUrl } from "../lib/cloudinary";
+
 interface Props {
     title: string;
     image: string;
@@ -6,10 +8,11 @@ interface Props {
 }
 
 const { title, image, href } = Astro.props;
+const imageUrl = getCldUrl(image, { width: 800, crop: "fill" });
 ---
 
 <a href={href} class="photo-card">
-    <img src={image} alt={title} />
+    <img src={imageUrl} alt={title} loading="lazy" decoding="async" />
 
     <div class="photo-card-overlay">
         <h2>{title}</h2>
