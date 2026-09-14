@@ -13,13 +13,13 @@ export type CldAsset = {
 };
 
 
-const cloudName = import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME;
+const cloudName = import.meta.env.CLOUDINARY_CLOUD_NAME;
 const apiKey = import.meta.env.CLOUDINARY_API_KEY;
 const apiSecret = import.meta.env.CLOUDINARY_API_SECRET;
 
 if (!cloudName || !apiKey || !apiSecret) {
   throw new Error(
-    "Missing PUBLIC_CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY or CLOUDINARY_API_SECRET for Admin API.",
+    "Missing CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY or CLOUDINARY_API_SECRET for Admin API.",
   );
 }
 
