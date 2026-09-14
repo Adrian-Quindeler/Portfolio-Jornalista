@@ -13,9 +13,16 @@ export type CldAsset = {
 };
 
 
-const cloudName = import.meta.env.CLOUDINARY_CLOUD_NAME;
-const apiKey = import.meta.env.CLOUDINARY_API_KEY;
-const apiSecret = import.meta.env.CLOUDINARY_API_SECRET;
+function readEnv(name: string): string | undefined {
+  const raw = import.meta.env[name] ?? process.env[name];
+  if (typeof raw !== "string" || !raw.trim()) return undefined;
+  // Strip accidental quotes from dashboard/.env paste (causes cloud_name mismatch)
+  return raw.trim().replace(/^["']|["']$/g, "");
+}
+
+const cloudName = readEnv("CLOUDINARY_CLOUD_NAME");
+const apiKey = readEnv("CLOUDINARY_API_KEY");
+const apiSecret = readEnv("CLOUDINARY_API_SECRET");
 
 if (!cloudName || !apiKey || !apiSecret) {
   throw new Error(
