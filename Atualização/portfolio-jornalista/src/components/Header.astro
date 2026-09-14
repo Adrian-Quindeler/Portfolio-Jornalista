@@ -1,20 +1,60 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
+
+const links = [
+    { href: "/", label: "Início" },
+    { href: "/#sobre", label: "Sobre" },
+    { href: "/#trabalhos", label: "Trabalhos" },
+    { href: "/#contato", label: "Contato" },
+];
 ---
 
 <header class="header">
-	<nav class="nav container">
-		<a href="/" class="profile">
-			Mariana
-		</a>
+    <nav class="nav container">
+        <a href="/" class="profile">
+            <span class="profile-kicker">Jornalista</span>
+            <span class="profile-name">Mariana Bernardino</span>
+        </a>
 
-		<div class="nav-links">
-			<a href="/">Início</a>
-			<a href="#sobre">Sobre</a>
-			<a href="#trabalhos">Trabalhos</a>
-			<a href="#contato">Contato</a>
-		</div>
+        <div class="nav-links" id="nav-links">
+            {links.map((link) => (
+                <a href={link.href}>{link.label}</a>
+            ))}
+        </div>
 
-		<ThemeToggle />
-	</nav>
+        <div class="header-actions">
+            <ThemeToggle />
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-links"
+                aria-label="Abrir menu"
+            >
+                <span class="nav-toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
 </header>
+
+<script>
+    const header = document.querySelector(".header");
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelectorAll(".nav-links a");
+
+    if (header instanceof HTMLElement && toggle instanceof HTMLButtonElement) {
+        const setOpen = (open: boolean) => {
+            header.classList.toggle("is-open", open);
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+        };
+
+        toggle.addEventListener("click", () => {
+            setOpen(!header.classList.contains("is-open"));
+        });
+
+        links.forEach((link) => {
+            link.addEventListener("click", () => setOpen(false));
+        });
+    }
+</script>

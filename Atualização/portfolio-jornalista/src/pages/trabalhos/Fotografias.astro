@@ -2,11 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import PhotoCard from "../../components/PhotoCard.astro";
+import PageBack from "../../components/PageBack.astro";
 import { galleries } from "../../data/fotografias";
 ---
 
 <Layout title="Fotografias | Mariana Bernardino">
     <section class="photography-page container">
+        <PageBack href="/#trabalhos" />
         <SectionTitle title="Fotografias" />
 
         <div class="photo-grid">

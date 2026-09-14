@@ -1,53 +1,183 @@
-/* Photo project pages */
-
+.photography-page,
 .photo-project {
-    padding-block: 3rem 4rem;
+    padding-block: calc(var(--section-space) * 0.75) var(--section-space);
 }
 
-.photo-project-intro {
-    max-width: 46rem;
-    margin: 0 auto 2.5rem;
-    text-align: center;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
 }
 
-.photo-project-intro p {
+.photo-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--color-ink);
+    aspect-ratio: 4 / 5;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.55s ease, filter 0.5s linear;
+}
+
+.photo-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.35rem;
+    background: var(--color-overlay);
+    opacity: 0.92;
+    transition: opacity var(--transition);
+}
+
+.photo-card-overlay h2 {
     margin: 0;
-    color: var(--color-text-muted);
-    font-size: 1.1rem;
+    color: var(--color-on-overlay);
+    font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+}
+
+.photo-card:hover img {
+    filter: contrast(1.2);
+    transform: scale(1.05);
+}
+
+.photo-card:hover .photo-card-overlay {
+    opacity: 1;
+}
+
+.photo-featured {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: start;
+    margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.photo-featured-kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0 0 1.1rem;
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.photo-featured-kicker::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    max-width: 6rem;
+    background: var(--color-line);
+}
+
+.photo-featured-title {
+    margin: 0 0 1.15rem;
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.photo-featured-description {
+    margin: 0;
+    color: var(--color-ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.photo-featured-media {
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-bg-elevated);
+}
+
+.photo-featured-media img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.photo-gallery-section {
+    margin-top: 0.5rem;
+}
+
+.photo-gallery-label {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0 0 1.5rem;
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.photo-gallery-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-line);
 }
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
 
 .gallery-item {
     margin: 0;
     overflow: hidden;
-    background: var(--color-border);
-    border-radius: var(--radius);
+    background: var(--color-bg-elevated);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    aspect-ratio: 1;
 }
 
-@media (max-width: 900px) {
+.photo-gallery-empty {
+    color: var(--color-ink-muted);
+}
+
+@media (min-width: 960px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .photo-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 860px) {
+    .photo-featured {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 639px) {
+    .photo-grid,
     .photo-gallery {
         grid-template-columns: 1fr;
     }
+}
 
-    .gallery-item img {
-        aspect-ratio: auto;
+@media (prefers-reduced-motion: reduce) {
+    .photo-card img {
+        transition: none;
+    }
+
+    .photo-card:hover img {
+        transform: none;
     }
 }

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import PhotoGallery from "../../../components/PhotoGallery.astro";
-import SectionTitle from "../../../components/SectionTitle.astro";
+import PageBack from "../../../components/PageBack.astro";
 import { galerias } from "../../../data/galerias";
 import { listFolder } from "../../../lib/cloudinary";
 
@@ -11,10 +11,12 @@ const photos = await listFolder(gallery.folder);
 
 <Layout title={`${gallery.title} | Mariana Bernardino`}>
     <section class="photo-project container">
-        <SectionTitle title={gallery.title} />
-        <div class="photo-project-intro">
-            <p>{gallery.description}</p>
-        </div>
-        <PhotoGallery photos={photos} alt={gallery.alt} />
+        <PageBack href="/trabalhos/Fotografias" />
+        <PhotoGallery
+            photos={photos}
+            alt={gallery.alt}
+            title={gallery.title}
+            description={gallery.description}
+        />
     </section>
 </Layout>

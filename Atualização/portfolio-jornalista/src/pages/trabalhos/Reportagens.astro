@@ -2,11 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import WorkCard from "../../components/WorkCard.astro";
+import PageBack from "../../components/PageBack.astro";
 import { reports } from "../../data/reportagens";
 ---
 
 <Layout title="Reportagens | Mariana Bernardino">
     <section class="works-page container">
+        <PageBack href="/#trabalhos" />
         <SectionTitle title="Reportagens" />
 
         <div class="works-grid">

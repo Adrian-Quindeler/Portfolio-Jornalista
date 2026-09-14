@@ -27,12 +27,17 @@ const imageUrl = isLocalOrRemote
         ? ""
         : image
     : getCldUrl(image, { width: 800, crop: "fill" });
+const isExternal = href.startsWith("http");
 ---
 
 <article class="work-card">
     <div class="image-container">
-        {imageUrl && (
+        {imageUrl ? (
             <img src={imageUrl} alt={title} loading="lazy" decoding="async" />
+        ) : (
+            <div class="image-fallback" aria-hidden="true">
+                <span>{title}</span>
+            </div>
         )}
     </div>
 
@@ -43,8 +48,8 @@ const imageUrl = isLocalOrRemote
         <a
             href={href}
             class="button button-primary"
-            target="_blank"
-            rel="noopener noreferrer"
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
         >
             {linkLabel}
         </a>

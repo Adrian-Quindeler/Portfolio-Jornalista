@@ -1,42 +1,42 @@
-:root {
-    --content-width: 1300px;
-
-    --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
-    --font-sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
-
-    --radius: 8px;
-    --shadow: 0 12px 32px rgba(44, 36, 28, 0.1);
-}
-
+:root,
 [data-theme="light"] {
-    --color-background: #faf6f0;
-    --color-surface: #fffaf4;
-
-    --color-text: #2c241c;
-    --color-text-muted: #6b5e52;
-
-    --color-primary: #63358f;
-    --color-accent: #9a63c7;
-
-    --color-on-primary: #fffaf4;
-    --color-border: #e5d9cd;
-
-    color-scheme: light;
+    --color-bg: #f3efe6;
+    --color-bg-elevated: #fffdf8;
+    --color-ink: #141414;
+    --color-ink-muted: #5c574e;
+    --color-accent: #b42318;
+    --color-accent-hover: #8f1c13;
+    --color-on-accent: #fffdf8;
+    --color-line: #d9d2c5;
+    --color-overlay: rgba(20, 20, 20, 0.55);
+    --color-on-overlay: #fffdf8;
+    --shadow-card: 0 18px 40px rgba(20, 20, 20, 0.08);
+    --shadow-header: 0 1px 0 rgba(20, 20, 20, 0.04);
 }
 
 [data-theme="dark"] {
-    --color-background: #1c1714;
-    --color-surface: #29221e;
+    --color-bg: #12151a;
+    --color-bg-elevated: #1c2128;
+    --color-ink: #ede8df;
+    --color-ink-muted: #a8a196;
+    --color-accent: #e85d4c;
+    --color-accent-hover: #ff7a6a;
+    --color-on-accent: #121212;
+    --color-line: #2c333c;
+    --color-overlay: rgba(8, 10, 14, 0.65);
+    --color-on-overlay: #ede8df;
+    --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.35);
+    --shadow-header: 0 1px 0 rgba(237, 232, 223, 0.04);
+}
 
-    --color-text: #f4ece4;
-    --color-text-muted: #c4b6a8;
-
-    --color-primary: #c7a1e8;
-    --color-accent: #b982df;
-
-    --color-on-primary: #1c1714;
-    --color-border: #40362f;
-    --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-
-    color-scheme: dark;
+:root {
+    --font-serif: "Instrument Serif", "Times New Roman", serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+    --radius-sm: 2px;
+    --radius-md: 6px;
+    --container-max: 1120px;
+    --container-pad: 1.5rem;
+    --header-height: 4.75rem;
+    --section-space: clamp(4.5rem, 8vw, 7.5rem);
+    --transition: 0.28s ease;
 }

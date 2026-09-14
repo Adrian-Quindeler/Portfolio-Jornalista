@@ -1,33 +1,65 @@
 ---
-import "../styles/fotografias.css";
 import { getCldUrl, type CldAsset } from "../lib/cloudinary";
 
 interface Props {
     photos: CldAsset[];
     alt?: string;
+    title: string;
+    description: string;
 }
 
-const { photos, alt = "Fotografia" } = Astro.props;
+const { photos, alt = "Fotografia", title, description } = Astro.props;
+
+const featured = photos[0];
+const rest = photos.slice(1);
 ---
 
 {
-    photos.length > 0 ? (
-        <div class="photo-gallery">
-            {photos.map((photo) => (
-                <figure class="gallery-item">
+    photos.length > 0 && featured ? (
+        <div class="photo-project-body">
+            <div class="photo-featured">
+                <div class="photo-featured-text">
+                    <p class="photo-featured-kicker">Em destaque</p>
+                    <h1 class="photo-featured-title">{title}</h1>
+                    <p class="photo-featured-description">{description}</p>
+                </div>
+
+                <figure class="photo-featured-media">
                     <img
-                        src={getCldUrl(photo.publicId, {
-                            width: 1200,
+                        src={getCldUrl(featured.publicId, {
+                            width: 1400,
                             crop: "limit",
                         })}
-                        width={photo.width || undefined}
-                        height={photo.height || undefined}
+                        width={featured.width || undefined}
+                        height={featured.height || undefined}
                         alt={alt}
-                        loading="lazy"
                         decoding="async"
                     />
                 </figure>
-            ))}
+            </div>
+
+            {rest.length > 0 && (
+                <div class="photo-gallery-section">
+                    <p class="photo-gallery-label">Todas as fotos</p>
+                    <div class="photo-gallery">
+                        {rest.map((photo) => (
+                            <figure class="gallery-item">
+                                <img
+                                    src={getCldUrl(photo.publicId, {
+                                        width: 1200,
+                                        crop: "limit",
+                                    })}
+                                    width={photo.width || undefined}
+                                    height={photo.height || undefined}
+                                    alt={alt}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </figure>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     ) : (
         <p class="photo-gallery-empty">Nenhuma fotografia disponível.</p>
